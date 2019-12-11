@@ -1,0 +1,24 @@
+@startuml
+
+class User{
+    string Name
+    string E-mail
+    string password
+}
+
+class Profession{
+    string code_profesion
+    string profesion
+}
+class Service{
+    string description
+}
+class Attention{
+    string type_attention
+}
+
+User "1" -- "*" Profession
+Profession "*" -- "1" Service
+Profession "*" -- "1" Attention
+
+@enduml
